@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book library</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div>
+                <input id="searchInput" placeholder="Filter by Title & Author" type="text">
+                <label for="searchInput"><img src="/assets/searchIcon.png" height="18px" alt="Filter by Title & Author"></label>
+            </div>
+            <div>
+                <button id="sortByTitle" onclick="sortData()" >Title <img height="16px" src="/assets/sort.png" alt="Sort by Publish date">  </button>
+                <button id="sortByPublishDate" onclick="dateSortData()" >Publish Date <img height="16px" src="/assets/sort.png" alt="Sort by Publish date"></button>
+            </div>
+
+        </header>
+        <div id="CardContainer" class="container">
+
+        </div>
+        <div class="pagination" >
+                <select  id="ItemCount">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                </select>
+                    <div id="pageCount">
+                    </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

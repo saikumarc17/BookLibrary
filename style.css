@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#searchInput{
+    height: 32px;
+    width: 250px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+button{
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.container{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 80vh;
+    background:black;
+overflow-y: scroll;
+    justify-content: space-evenly;
+}
+
+.book{
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    padding: 10px;
+    background: whitesmoke;
+    border-radius: 10px;
+    gap: 10px;
+    width: 380px;
+    height: 350px;
+}
+.book img{
+    border-radius: 10px;
+    height: 150px;
+    margin-left: 10px;
+}
+h4{
+    margin-left: 10px;
+}
+
+td{
+    padding: 3px 10px;
+    word-wrap:break-word
+}
+
+.pagination{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.pagination div{
+    background-color: aliceblue;
+    border-radius: 10px;
+    display: flex;
+}
+.pagination div .count{
+    padding: 10px;
+    margin: 10px;
+    background-color: gray;
+    border-radius: 10px;
+}
+select{
+    padding: 10px;
+    margin: 10px;
+}
+
+/*media query tablet view  */
+@media (min-width:768px) and (max-width:1024px)  { 
+    .book{
+        width: 360px;
+    }
+}
+
