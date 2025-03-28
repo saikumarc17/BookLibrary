@@ -36,3 +36,27 @@ A dynamic and responsive **Book Library** built with **HTML**,**CSS** and **Java
 
 3. **Open `index.html` in a browser**  
    You can simply double-click on the `index.html` file or use Live Server in VS Code.
+
+## API Details
+
+The app fetches data from the following API endpoint:
+
+```
+https://api.freeapi.app/api/v1/public/books
+```
+
+Parameters:
+
+- `page`: Current page number.
+- `limit`: Number of items per page.
+
+## Known Issues
+
+- Ensure the API endpoint is accessible; otherwise, the app may not load data.
+- Sorting and pagination rely on the data fetched from the API.
+
+## Future Enhancements
+
+- Add more filters (e.g., by publisher or genre).
+- Improve error handling for API failures.
+- Enhance the UI/UX for better usability.
