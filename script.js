@@ -31,6 +31,7 @@ async function getBooks(paginationNumber,limit){
         publisher:ele.volumeInfo.publisher?ele.volumeInfo.publisher:'Not Available',
         publishedDate:ele.volumeInfo.publishedDate?ele.volumeInfo.publishedDate:'Not Available',
         image:ele.volumeInfo.imageLinks.smallThumbnail,
+        infoLink:ele.volumeInfo.infoLink,
     }))
     generateBooks(booksArray);
     totalPagination=booksData.data.totalPages;
@@ -42,10 +43,12 @@ getBooks(currentPage,itemsPerPage);
 
 function populateBookDetails(bookele){
     const cardContent=`
+    <a href="${bookele.infoLink}" target="_blank">
             <img 
             src="${bookele.image}"
             alt="${bookele.title}">
             <div>
+
                 <h4>${bookele.title}</h4>
                 <div>
                     <table>
@@ -63,9 +66,13 @@ function populateBookDetails(bookele){
                         </tr>
                     </table>
                 </div>
-            </div>`
+            </div>
+            </a>
+            `
 
     const bookCard=document.createElement('div');
+    
+
     bookCard.classList.add('book');
     bookCard.innerHTML=cardContent;
     CardContainer.appendChild(bookCard);
